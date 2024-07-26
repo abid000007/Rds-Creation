@@ -21,11 +21,11 @@ def create_db_subnet_group(rds_client, subnet_ids):
 def create_rds_instance(rds_client):
     try:
         response = rds_client.create_db_instance(
-            DBInstanceIdentifier='my-rds-instance',
-            AllocatedStorage=20,  # in GB
+            DBInstanceIdentifier='name',
+            AllocatedStorage=,  # in GB
             DBInstanceClass='db.t3.micro',
             Engine='mysql',
-            MasterUsername='admin',
+            MasterUsername='anyusername',
             MasterUserPassword='yourpassword',
             DBName='mydatabase',
             VpcSecurityGroupIds=[
